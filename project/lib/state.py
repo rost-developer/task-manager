@@ -20,10 +20,6 @@ class State(object):
             return search[0]
         return False
 
-    def total_point_state(self):
-        # return lambda x: x.total_point_getter + x
-        pass
-
     @property
     def state_getter(self):
         return self._list_employer
