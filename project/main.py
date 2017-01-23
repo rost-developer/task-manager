@@ -4,7 +4,7 @@ from random import randint
 
 from lib import Options
 from lib import State
-from lib import Employer
+from lib import Employee
 from lib import Task
 from lib import Manager
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     state = State()
 
     for i in range(opts.numb_person):
-        state.add_employer(Employer(names.get_full_name(), randint(8, 30)))
+        state.add_employee(Employee(names.get_full_name(), randint(8, 30)))
 
     # Filling list tasks
     task_list = [ Task("Task #{0}".format(i), randint(1, 8)) for i in range(opts.numb_tasks) ]
@@ -27,5 +27,5 @@ if __name__ == '__main__':
         Manager.appoint_task(state.state_getter, task)
 
     # Print result distribution
-    for employer in state.state_getter:
-        print("\n%s" % employer.__str__())
+    for employee in state.state_getter:
+        print("\n%s" % employee.__str__())

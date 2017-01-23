@@ -3,8 +3,8 @@ class Task(object):
     this class is useful for defining a type of Task
     with its task name and task point
     this class has following methods and properties
-    task_id_getter()
-    task_point_getter()
+        task_id_getter()
+        task_point_getter()
     """
 
     def __init__(self, task_name, task_point):

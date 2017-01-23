@@ -1,7 +1,7 @@
 import json
 
 
-class Employer(object):
+class Employee(object):
     """
     this class is useful for defining a type of Employer
     with its nick name, personal point, total point, tasks
@@ -49,7 +49,7 @@ class Employer(object):
         else:
             return False
 
-    def __str__(self, type_format='cmd'):
+    def __str__(self, type_format=None):
         if type_format == 'json':
             return json.dumps(self, default=lambda o: o.__dict__,
                               sort_keys=False, indent=4)
